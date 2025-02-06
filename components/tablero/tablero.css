@@ -1,3 +1,26 @@
 .tablero {
-    background-color: mediumvioletred;
+    background-color: white;
+}
+
+.div-tablero {
+    background-color: rgb(229, 229, 236);
+    display: grid;
+    gap: 2rem;
+    padding: 3rem;
+    grid-template-columns: repeat(5, 1fr); 
+    grid-template-rows: repeat(2, 8rem);   
+}
+
+.carta {
+    background-color: white;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    transition: box-shadow 0.3s ease;
+    font-size: 4rem;
+    -webkit-box-shadow: 7px 10px 48px 0px rgba(105, 105, 105, 1);
+    -moz-box-shadow: 7px 10px 48px 0px rgba(105, 105, 105, 1);
+    box-shadow: 7px 10px 48px 0px rgba(105, 105, 105, 1);
 }
