@@ -1,3 +1,58 @@
-.header {
-    background-color: red;
+.header{
+    width: 100%;
+    height: 100%;
+
+
+    background-color: rgba(45, 206, 247, 0.884);
+}
+
+.dLogo {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.eleHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem;
+    margin: 0rem 2rem;
+}
+
+.divImg {
+    width: 8rem;
+    height: 8rem;
+}
+
+.divImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tEmpresa {
+    font-size: 3rem;
+}
+
+.nivelesList {
+    height: 7rem;
+    width: 40rem;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 1rem;
+}
+.nivel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    background-color: mediumslateblue;
+}
+.nivel:hover {
+    transition: 1s;
+    border-radius : 50% ;
 }
