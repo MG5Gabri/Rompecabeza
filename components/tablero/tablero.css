@@ -23,4 +23,15 @@
     -webkit-box-shadow: 7px 10px 48px 0px rgba(105, 105, 105, 1);
     -moz-box-shadow: 7px 10px 48px 0px rgba(105, 105, 105, 1);
     box-shadow: 7px 10px 48px 0px rgba(105, 105, 105, 1);
+
+    cursor: pointer;
+}
+
+.marcado {
+    background-color: maroon;
+}
+
+.carta:hover {
+    border: 2px solid maroon;
+    transform: 0.3s;
 }
