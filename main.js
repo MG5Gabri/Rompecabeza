@@ -1,4 +1,5 @@
 import { elementosHeader } from "./components/header/header.js";
+import { mezclarCartas } from "./components/tablero/data.js";
 import { cargarCartas } from "./components/tablero/tablero.js";
 
 let DOM = document.querySelector('#root')
@@ -21,6 +22,15 @@ let divTablero = document.createElement('div')
 divTablero.className = "tablero"
 contenedor.appendChild(divTablero) 
 divTablero.appendChild(cargarCartas())
+
+let todasLasCartasDelDOM = document.querySelectorAll('.carta')
+todasLasCartasDelDOM.forEach(cadaCarta =>{
+
+    cadaCarta.addEventListener("click", ()=>{
+        cadaCarta.classList.add("marcado")
+    })
+
+})
 
 let divFooter = document.createElement('div')
 divFooter.className = "footer"
