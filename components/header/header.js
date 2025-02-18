@@ -1,24 +1,11 @@
-function item(level) {
-    let div = document.createElement('div');
-    div.innerText = level;
-    div.className = "nivel";
-    return div;
-}
-
-function niveles(listadeniveles) {
-    let nivelesJuego = ['1', '2', '3', '4', '5'];
-
-    nivelesJuego.forEach((letra) => {
-        listadeniveles.appendChild(item(letra)); // Agrega los niveles al contenedor
-    });
-
-    return listadeniveles; // Retorna el div con los niveles añadidos
-}
-
+import { niveles } from "./itemNiveles.js"
 
 function elementosHeader() {
+    let divHeader = document.createElement('div')
+    divHeader.className = "header"
     let elementsHeader = document.createElement('div')
     elementsHeader.className = "eleHeader"
+    divHeader.appendChild(elementsHeader)
 
         let logo = document.createElement('div')
             logo.className = "dLogo"
@@ -42,7 +29,7 @@ function elementosHeader() {
     listadeniveles.className = "nivelesList"
     elementsHeader.appendChild(niveles(listadeniveles))
     
-    return elementsHeader
+    return divHeader
 }
 
 export {elementosHeader}

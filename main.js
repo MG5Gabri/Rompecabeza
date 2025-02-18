@@ -1,40 +1,36 @@
+import { cargarFooter } from "./components/footer/footer.js";
 import { elementosHeader } from "./components/header/header.js";
-import { mezclarCartas } from "./components/tablero/data.js";
-import { cargarCartas } from "./components/tablero/tablero.js";
+import { cargarProgreso } from "./components/progreso/progreso.js";
+import { cargarTablero } from "./components/tablero/tablero.js";
 
-let DOM = document.querySelector('#root')
-
+function cargarDOM() {
 let contenedor = document.createElement('div')
 contenedor.className = "contenedor"
-DOM.appendChild(contenedor) 
 
 
-let divHeader = document.createElement('div')
-divHeader.className = "header"
-contenedor.appendChild(divHeader) 
-divHeader.appendChild(elementosHeader())
+contenedor.appendChild(elementosHeader())
 
-let divProgreso = document.createElement('div')
-divProgreso.className = "progreso"
-contenedor.appendChild(divProgreso) 
+contenedor.appendChild(cargarProgreso()) 
 
-let divTablero = document.createElement('div')
-divTablero.className = "tablero"
-contenedor.appendChild(divTablero) 
-divTablero.appendChild(cargarCartas())
+contenedor.appendChild(cargarTablero()) 
+
+contenedor.appendChild(cargarFooter())
+return contenedor
+}
+
+let DOM = document.querySelector('#root')
+DOM.appendChild(cargarDOM()) 
 
 let todasLasCartasDelDOM = document.querySelectorAll('.carta')
 todasLasCartasDelDOM.forEach(cadaCarta =>{
 
     cadaCarta.addEventListener("click", ()=>{
-        cadaCarta.classList.add("marcado")
+        cadaCarta.classList.toggle("marcado") 
+        /* toggle es como un interruptor ON/OFF para clases css
+            Osea que quita la clase y la pone
+        */
     })
 
 })
 
-let divFooter = document.createElement('div')
-divFooter.className = "footer"
-contenedor.appendChild(divFooter)
-
-cargarCartas()
 
