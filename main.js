@@ -1,3 +1,4 @@
+import { elementosHeader } from "./components/header/header.js";
 import { mezclarCartas } from "./components/tablero/data.js";
 import { cargarCartas } from "./components/tablero/tablero.js";
 
@@ -11,7 +12,7 @@ DOM.appendChild(contenedor)
 let divHeader = document.createElement('div')
 divHeader.className = "header"
 contenedor.appendChild(divHeader) 
-
+divHeader.appendChild(elementosHeader())
 
 let divProgreso = document.createElement('div')
 divProgreso.className = "progreso"
